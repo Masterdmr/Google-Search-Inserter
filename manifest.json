@@ -1,0 +1,22 @@
+{
+  "name": "Google Search Inserter",
+  "description": "Modify Google Searches",
+  "version": "1.0",
+  "permissions": [
+    "activeTab", "declarativeContent", "storage", "tabs"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+	// put stuff in the * -- *
+      "matches": ["https://www.google.com/**", "https://www.chase.com/content/dam/chaseonline/en/demos/cbo/launch.html"],
+      "js": ["content-script.js"]
+    }
+  ],
+  
+  "manifest_version": 2
+}
